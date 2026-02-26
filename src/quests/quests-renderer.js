@@ -1,4 +1,4 @@
-import { LogicTypes, ComparisonTypes, QuestSortPriority, ValueTypes } from "./quests-datatypes.js";
+import { LogicTypes, ComparisonTypes, QuestSortPriority, ValueTypes } from "../datatypes.js";
 
 export class QuestsRenderer {
     constructor(qualities){

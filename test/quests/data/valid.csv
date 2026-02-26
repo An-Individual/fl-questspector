@@ -1,0 +1,13 @@
+category,Cat 1,cat1,20
+mappings,"a=123,b=456",,
+quest,Quest 1,q1,
+c,State 1,a,
+,Task 1,b=321,
+quest,Quest 2,q2,
+ns,State 2,b,
+category,Cat 2,cat2,10
+mappings,"a=789,c=7",,
+quest,Quest 3,q3,
+ip,State 3,a<5,
+,Task 2,c>=3,c>1
+b,State 4,b=1,

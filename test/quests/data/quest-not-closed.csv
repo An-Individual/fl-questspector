@@ -1,0 +1,8 @@
+category,Cat 1,cat1,20
+mappings,"a=123,b=456",,
+quest,Quest 1,q1,
+c,State 1,a,
+,Task 1,b=321,
+category,Cat 2,cat2,10
+mappings,"a=789,c=7",,
+quest,Quest 2,q2,
