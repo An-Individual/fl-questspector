@@ -1,0 +1,91 @@
+augcat,london,,
+quest,An Exceptional Sample: Reunion,es_reunion,
+mappings,"alpha=1018,blood=1015,flourish=1020,darkness=1016,story=142770",,
+ns,"You can now play the trial Exceptional Story: Reunion. Claim it from the 
+Fifth City Stories section.",alpha>=5 && blood >=5 && flourish >=5 && darkness>=5,
+ns,Head to your Exceptional Library in Your Lodgings to begin the story.,story=1,
+ip,"You are engaged in the Exceptional Story: Reunion. Find it's storylets
+across London.",story>=2,
+c,You've completed the Exceptional Story: Reunion.,story >= 1200,
+//,*********************************************************************************,,
+quest,A Friend of an Unlucky Devil,unlucky_devil,
+mappings,story=143105,,
+ns,"Don't worry, you'll meet him. You can't avoid it.",!story,
+ip,The story continues in the London Opportunity deck.,story,
+c,You've resolved your relationship with an Unlucky Devil.,story>2,"This is a one off choice from a card in london with
+4 endings. I'd like to list them as separate conclusions
+but the wiki appears to have the wrong values. It lists
+10, 20, 30, and 40 as the terminal values, but my alt
+picked the option that should end at 10 and instead
+has 11."
+//,*********************************************************************************,,
+quest,The Screaming Map,screaming_map,
+mappings,"ho=977,explorer=771,routedocks=428,visitor=978,target=952,time=953,left=955,right=981,map=835",,
+ns,**Chat with the Local Gossip** in Your Lodgings about the Screaming Map.,!ho & explorer && routedocks,
+ip,"Head to Wolfstack Docks to begin your search. You'll need to hunt down both
+halves of the map and then assembly them in Your Lodgings.",ho,
+,The Left-Hand Half of a Screaming Map,left,
+,The Right-Hand Half of a Screaming Map,right,
+b,You are waiting on a living story.,ho && target && target<=3,
+ip,Someone has a gift for you in Your Lodgings.,ho && target && target<=3 && visitor,
+ip,You are playing Cat and Mouse in Wolfstack Docks.,ho && target && target<=3 && time,
+c,You've assembled the Screaming Map and can zail to Polythreme.,map,
+//,*********************************************************************************,,
+quest,An Editor of Newspapers,newspaper,
+mappings,"story=732,posi=716,shadowy=210",,
+ns,Inquire with an urchin through **Chat with the Local Gossip** in Your Lodgings.,!story && posi && shadowy>=110,
+ip,Head to Doubt Street via the map to pursue this.,story,
+c,You've founded a newspaper.,story >= 10,
+//,*********************************************************************************,,
+quest,Uncover Hidden Tattoos,hidden_tattoos,
+mappings,"story=248,persuasive=212,tggmoves=109222,mynp=1020",,
+ns,Begin this by **Dabbling in the Great Game** in Veilgarden.,!story && !tggmoves && persuasive>=22 && mynp>=2,
+ip,Continue this story by **Dabbling in the Great Game** in Veilgarden.,story,
+c,"You've completed this story. See your *The Great Game - Opening Moves*
+quality on your Myself tab to remember the ending.",tggmoves,
+//,*********************************************************************************,,
+quest,The Prelapsarian History of the Red Science,red_history,
+mappings,"artsci=140969,first=143188,second=143189,third=143190,fourth=143191,fifth=143192",,
+ns,"Head to your lab and to begin this experiment. There are multiple conclusions.
+To make progress you'll need, among other things, expertise in the various cities.
+Try searching the Waswood or talking to Lettice, the Mercy. There may be
+other, more reliable sources. The default conclusion, while profitable, 
+will not begin this quest.",artsci.cap>=2,
+ip,"Head to your lab and to begin another experiment. As before,
+to make progress you'll need, among other things, expertise in the various cities.
+Try searching the Waswood or talking to Lettice, the Mercy. There may be
+other, more reliable sources.",first || second || third || fourth,
+,A Mystery of the First City,first,
+,A Mystery of the Second City,second,
+,A Mystery of the Third City,third,
+,A Mystery of the Fourth City,fourth,
+ip,You've studied the previous cities. Now you can study the current one.,first && second && third && fourth,
+c,You've studied all you can.,fifth,
+//,*********************************************************************************,,
+quest,Advising the Loquacious Vicar,loq_vicar,
+mappings,story=943,,
+ns,Meet the vicar on Ladybones Road.,!story,
+ip,Continue this story on Ladybones Road.,story,
+c,"You've completed this story. See the *Advising the Loquacious Vicar* quality
+on your Myself page to review the ending.",story>5,
+//,*********************************************************************************,,
+quest,A Friendship with a Bohemian Sculptress,boh_sculptress,
+mappings,story=941,,
+ns,Meet the sculptress in Veilgarden.,!story,
+ip,Continue this story in The Singing Mandrake.,story,
+c,"You've completed this story. See the *A Friendship with a Bohemian Sculptress*
+quality on your Myself page to review the ending.",story>5,
+//,*********************************************************************************,,
+quest,Collecting Clues for the Clay Coalman,clay_coalman,
+mappings,story=940,,
+ns,Meet the coalman on Watchmaker's Hill.,!story,
+ip,Continue this story on Watchmaker's Hill.,story,
+c,"You've completed this story. See the *Collecting Clues for the Clay Coalman*
+quality on your Myself page to review the ending.",story>5,
+//,*********************************************************************************,,
+quest,Befriending a Rooftop Urchin,roof_urchin,
+mappings,story=942,,
+ns,Meet the urchin in Spite.,!story,
+ip,Continue this story in Spite.,story,
+c,"You've completed this story. See the *Befriending a Rooftop Urchin*
+quality on your Myself page to review the ending.",story>5,

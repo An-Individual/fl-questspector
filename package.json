@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "eslint": "^10.0.2",
+    "mocha": "^11.3.0"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js && node ./quests/compile-quests.js",
+    "test": "mocha --recursive"
+  }
+}

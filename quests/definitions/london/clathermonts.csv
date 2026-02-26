@@ -1,0 +1,20 @@
+augcat,london,,,
+quest,Entwined in the Intrigues of the Clathermont Family,clathermonts,,
+mappings,"story=690,mynw=1018",,,
+ns,This story begins on Ladybones Road.,!story && mynw>=4,,
+ip,The story continues on Ladybones Road.,story,,
+ip,"The story continues on Ladybones Road during the second and
+third weeks of The Feast of the Exceptional Rose. In the mean time,
+you can learn more if you have access to Wilmot's End.",story=8,,"Everything past this point takes place during the second
+and third weeks of The Feast of the Exceptional Rose
+and we don't have hooks to check if that's true so we're
+just going to have to repeat that over and over and over."
+ip,"The story continues on Ladybones Road during the second and
+third weeks of The Feast of the Exceptional Rose.",story=9,,
+ip,"Seek out **The Lady in Lilac** during the second and third
+weeks of The Feast of the Exceptional Rose.",story>=10,,
+ip,"Meet The Lady in Lilac in Veilgarden during the second and third
+weeks of The Feast of the Exceptional Rose..",story>=15,,
+c,"You've completed this story. During the second and third
+weeks of The Feast of the Exceptional Rose you can find
+Millicent in the Forgotten Quarter.",story>=30,,

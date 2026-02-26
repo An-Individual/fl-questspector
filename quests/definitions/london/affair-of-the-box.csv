@@ -1,0 +1,40 @@
+augcat,london,
+quest,The Affair of the Box,affair_box
+mappings,"story=450,myn=1016,box=451,routehall=696,tales=685,power=884,newspaper=906,truth=914",
+ns,Look for **A box of secrets** in Spite.,myn>=3
+ip,"There's a mysterious box in Your Lodgings. You can also inquire about 
+the Stuttering Fence in Spite.",story=1&&!box
+ip,Look for the Stuttering Fence in The Flit.,story=1&&box
+ip,Investigate your Heavy Iron Box.,story=2&&box
+ip,**Corner the Fence** in The Flit,story=3&&box
+ip,Some fine gentlemen are waiting for you in The Flit.,story=4&&box
+b,Find the way to Mahogany Hall and start your career to proceed.,story=5
+ip,Remind yourself about the box in Mahogany Hall.,story=5&&routehall&&tales
+ip,Jasper and Frank lurk in Mahogany Hall. You'll need the right Tales level to proceed.,story=6
+ip,You'll need the right Tales level to find the Kashmiri Princess in Mahogany Hall.,story=7
+ip,"Talk to the Kashmiri Princess in Mahogany Hall. You'll need the right 
+Tales level to proceed.",story=8
+ip,**Get close to Esmeralda and Rose** in Mahogany Hall.,story=9
+ip,You have planning to do in Mahogany Hall.,story=10
+ip,The next step involves a Sunday show in Mahogany Hall.,story=11
+ip,Pursue *A Boxful of Intrigue* in Spite to find **The D__nable Box**.,story>=12&&story<=14
+ip,Find **The Troubles So Far** in Spite to unlock the *A Boxful of Intrigue* carousel.,story>=12&&!power
+ip,Someone might have a key for you in Spite.,story=15
+ip,It's time to open that d__nable box in Spite.,story=16
+ip,"Okay, this time you'll open that d__nable box in Spite.",story=17
+ip,Find out more in Spite.,story=18
+ip,Speak to The Widow in Spite.,story=19
+ip,Find **Yesterday's King** in Spite.,story=20
+ip,Find **A Devil of a Plan** in Spite.,story=21
+ip,Decide what to do with the box in Spite.,story=22
+ip,Meet Mr. Stones in Spite.,story=30
+ip,Look into Mr. Fires in Spite.,story=31
+ip,Find Mr. Fires in Spite.,story=40
+ip,Spy on Mr. Stones in Spite.,story=41
+b,You'll need to found a Newspaper to proceed.,story=50
+ip,Find **Baring All** in Spite.,story=50 && newspaper
+b,You'll need to improve your newspaper's reputation for truth to proceed.,story=51
+ip,It's time to publish a very special edition of your newspaper.,story=51 && truth>=3
+c,You sided with Mr. Stones.,story=60
+c,You sided with Mr. Fires.,story=70
+c,You published it all in your newspaper.,story=80

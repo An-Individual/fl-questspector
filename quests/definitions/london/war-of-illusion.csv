@@ -1,0 +1,23 @@
+augcat,london,
+quest,The Wars of Illusion,war_illusions
+mappings,"story=575,myns=1016,bats=574,cats=573,glass=682,shroud=683,shadowy=210,routehall=696",
+ns,Get started via **The Heights of Chicanery** in The Flit.,myns>=6
+ip,"Figure out what's going on with these people by working with
+**Bats and Cats** in The Flit.",story>=6
+ip,Look for **Making More Use of Bats. Or Cats.** in The Flit.,story=9
+ip,Work with Bats or Cats in The Flit to gain the full trust of one of them.,story>=10
+b,Increase your Shadowy to proceed.,story>=10 && shadowy<97
+ip,Be welcomed at Mahogany Hall.,story=15
+b,Find your way to Mahogany Hall to proceed.,story=15 && !routehall
+ip,Work for or betray your chosen side at Mahogany Hall.,story=20
+b,Increase your Shadowy to proceed.,story=20 && shadowy<97
+ip,Make final preparations for the grand séance at Mahogany Hall.,story=20 && shroud=15
+ip,Make final preparations for the grand illusion at Mahogany Hall.,story=20 && glass=15
+ip,Perform the grand séance at Mahognay Hall.,story=25 && shroud>=16 && shroud<=19
+b,Increase your Shadowy to proceed.,story=25 && shroud>=16 && shroud<=19 && shadowy<97
+ip,"Perform the grand illusion at Mahognay Hall. It must be
+performed on Saturday.",story=25 && glass>=16 && glass<=19
+c,"You performed the grand séance! Despite what the game says,
+this is the end of the story for now.",shroud>=20
+c,"You performed the grand illusion! Despite what the game says,
+this is the end of the story for now.",glass>=20

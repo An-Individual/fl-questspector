@@ -1,0 +1,21 @@
+augcat,london,,,
+quest,Playing with Soul,playing_soul,,
+mappings,"story=1025,routemandrake=140932,mpianist=126056,mspirifer=126057,waiting=144195",,,
+ns,A Spirifer and a Pianist can be found in The Singing Mandrake.,!story && routemandrake,,
+ip,Await a message in the London Opportunity deck.,story,,
+ip,Meet the Blind Pianist in The Singing Mandrake.,story && mpianist,,
+ip,Meet the Sallow Spirifer in The Singing Mandrake.,story && mspirifer,,
+ip,Hostilities resume in the Fifth City Stories section.,story=4,,
+b,You are waiting on a living story. Settle in. It's a long one.,story=4 && waiting,,
+ip,Visit the Blind Pianist in Spite.,story=5,,
+ip,You have business with the Sallow Spirifer in the Fifth City Stories section.,story>=6,,
+ip,Meet the Blind Pianist in Spite.,story=10,,
+ip,"Head to the Sunken Embassy on Moloch Street. If you don't have access to
+it yet, pursue *A Name in Seven Secret Alphabets*.",story>=11,,
+ip,Look for **Returning to the Blind Pianist** to continue.,story>=15,,"Probably another fifth city story but the wiki
+isn't clear and the guide doesn't specify."
+ip,Find the Blind Pianist in Wolfstack Docks.,story=20,,
+ip,The end is in sight. The end is at zee.,story>=25,,
+c,"You've completed the story of the Sallow Spirifer and the Blind Pianist. To
+remind yourself of the conclusion look for **To All Things An End** on
+your Myself tab.",story>=100,,

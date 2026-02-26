@@ -1,0 +1,38 @@
+augcat,core,
+quest,A Person of Some Importance,posi1
+mappings,"watchful=209,shadowy=210,dangerous=211,persuasive=212,consequence=715,importance=716",
+b,"You need Watchful, Shadowy, Dangerous or Persuasive 100
+to begin this. This includes bonuses from equipment.",watchful>=70 || shadowy>=70 || dangerous>=70 || persuasive>=70
+ns,"Watch for a gold bordered card in the London Opportunities deck
+that mentions a *coincidence*.",watchful>=100 || shadowy>=100 || dangerous>=100 || persuasive>=100
+ip,Meet the Ambitious Barrister in Your Lodgings.,consequence
+ip,Stroll around Watchmaker's Hill.,consequence=3
+ip,Wander through Veilgarden.,consequence=4
+ip,Tour Spite.,consequence=5
+ip,Walk down Ladybones Road.,consequence=6
+ip,"Look for any one of these cards in the London Opportunities deck:
+- A matter of the wardrobe
+- A respectable address
+- A little hideaway
+- Friends and acquaintances",consequence=7
+ip,Look for **Sufficient Importance** in Your Lodgings.,consequence=8
+ip,There's an interesting briefcase in Your Lodgings.,consequence=9
+ip,Meet the Ambitious Barrister in the Bazaar Side-Streets,consequence=10
+ip,Acquire a Velocipede in the Bazaar Side-Streets.,consequence=11
+ip,Finish up in the Bazaar Side-Streets.,consequence=12
+c,Congratulations! You are a Person of Some Importance.,importance
+//,**********************************************************************,
+quest,A Person of Even Greater Importance,posi2
+b,"Raise your base Watchful, Shadowy, Dangerous or Persuasive 
+to 200. This does not include equipment.",watchful>=170 || shadowy>=170 || dangerous>=170 || persuasive>=170
+ns,"Find the **Unfinished Business** storylet at one of the below
+locations to achieve a specialization. You may need to
+do some shopping first. You can only pick one. It is possible,
+though not easy, to change it later.",watchful>=200 || shadowy>=200 || dangerous>=200 || persuasive>=200
+,Ladybones Road,watchful>=200
+,Spite,shadowy>=200
+,Watchmaker's Hill,dangerous>=200
+,Veilgarden,persuasive>=200
+b,"You must become *A Person of Some Importance* before you can
+become A Person of Even Greater Importance.",!importance
+c,You've become a person of even greater importance!,importance>2

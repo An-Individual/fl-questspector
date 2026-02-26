@@ -1,0 +1,26 @@
+augcat,london,
+quest,The Cheesemonger,cheesemonger
+mappings,"trail=591,agent=592,piece=594,mynw=1018,watchful=209,shadowy=210,dangerous=211,persuasive=212",
+ns,Watch for events in the London Opportunity deck.,mynw>=3
+ip,Events continue to unfold in the London Opportunity deck.,trail
+ip,Follow the trail in the London Opportunity deck.,trail>=2
+ip,Work for the Cheesemonger in the London Opportunity deck.,agent
+ip,Increase your Persuasive to proceed.,agent && persuasive < 40
+ip,Work for the Cheesemonger in the London Opportunity deck.,agent>=4
+b,Increase any of your core stats to proceed.,agent>=4 && watchful<40 && shadowy<40 && dangerous<40 && persuasive<40
+ip,Visit a **Quiet Side Street in Spite**.,agent=7
+ip,You have a robbery to commit in Spite.,agent=8
+ip,You have a beating to deliver in Spite.,agent=9
+ip,Await your next job in the London Opportunity deck.,agent=10
+ip,Seek out **The Valet* in the Shuttered Palace.,agent=11
+ip,Head back to Spite to continue the story.,agent>=12
+ip,She'll contact you through the London Opportunity deck.,agent>=14
+ip,You have business with a Cipher in the Forgotten Quarter.,agent>=16
+ip,An invitation waits at Your Lodgings.,agent=18
+ip,Meet with her in Veilgarden.,agent>=19
+ip,Return to your lodgings.,agent=21
+ip,Enact her plan in Spite.,agent>=22
+ip,You've chosen betrayal. But to whom?,agent=25
+ip,Decide the fate of the Cheesemonger in Veilgarden.,agent>=26
+ip,One final step waits in the London Opportunity deck.,piece
+c,You've completed the tale of The Cheesemonger.,piece>=2

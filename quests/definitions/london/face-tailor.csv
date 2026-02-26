@@ -1,0 +1,9 @@
+augcat,london,
+quest,Uncovering the Secrets of the Face-Tailor,face_tailor
+mappings,"story=621,idol=620",
+ns,A card in the London Opportunities deck begins this story.,!story
+ip,The story continues in the London Opportunities deck.,story
+ip,There's a thing on your dresser in Your Lodgings.,story=2 && idol
+ip,The story continues in the London Opportunities deck.,story>=3
+c,You completed this story and remained true to the idol.,story=5
+c,You completed this story and broke away from the idol.,story=6

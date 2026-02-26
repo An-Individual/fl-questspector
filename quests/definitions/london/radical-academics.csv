@@ -1,0 +1,21 @@
+augcat,london,
+quest,Associating with Radical Academics,radical_academics
+mappings,"story=577,garden=963,watchful=209,hislordship=578,posi=716,governor=119386,labyrinth=623",
+ns,They lurk in the London opportunity deck.,!story && (garden>=5 || watchful >= 69)
+ip,Find them again in the London opportunity deck.,story>=1
+b,Increase your Watchful to continue.,story=1 && garden<5 && watchful<81
+b,Increase your Watchful to continue.,story=2 && watchful<93
+b,Get closer to His Amused Lordship or the Gates of the Garden to continue.,story=3 && hislordship<3 && garden<15
+ip,**Join the Dilmun Club** on Ladybones Road.,story=4
+b,Become a Person of Some Importance to continue.,story=4 && !posi
+b,You're waiting on a living story.,story=5
+ip,Return to the club on Ladybones Road.,story=6
+ip,You'll find them in the London Opportunity deck.,story=7
+b,"You need to complete *A Name Signed with a Flourish* and 
+*A Posting Abroad* to proceed.",story=7 && !governor
+ip,Head to the fifth coil of the Labyrinth of Tigers to proceed.,story>=10
+b,"You'll need to complete *A Name Scrawled in Blood* and progress
+*The Labyrinth of Tigers* to continue.",story=10 && labyrinth<14
+ip,Zail to The Court of the Wakeful Eye to proceed.,story>=20
+c,"You've associated yourself with some radical academics. While this quest
+is done, the story continues in Evolution.",story>=75

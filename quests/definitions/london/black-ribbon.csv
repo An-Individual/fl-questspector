@@ -1,0 +1,13 @@
+augcat,london,
+quest,Dueling with the Black Ribbon,dueling_ribbon
+mappings,"dueling=547,spider=538,route=430",
+ns,A letter from Feducci waits in Wolfstack Docks.,spider>=3 && !dueling
+ip,Chat with Feducci in Wolfstack Docks.,dueling=1
+ip,**Confront the Drownies** in Wolfstack Docks.,dueling=2
+ip,**Confront the Errant Duellist** in Wolfstack Docks,dueling=3
+ip,Meet Feducci in Wolfstack Docks.,dueling=4
+b,"Pursue *A Name Whispered in Darkness* to find the way
+to The Flit.",dueling=5 && !route
+ip,"Defeat Captain Vendrik in a duel to the death in 
+The Blind Helmsman.",dueling=5 && route
+c,You've completed Dueling with the Black Ribbon!,dueling>5

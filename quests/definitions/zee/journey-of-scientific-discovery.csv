@@ -1,0 +1,32 @@
+augcat,zee,,,
+quest,A Voyage of Scientific Discovery,science_voyage,,
+mappings,"voyage=895,hislordship=578,universitytales=600,academics=577,watchful=209,posi=716,unwelcome=649",,,
+ns,"Begin the voyage with **A Sneering Gentleman** on Ladybones Road or
+the Loquacious Vicar through **Chat with the Local Gossip** in Your Lodgings.",!voyage && universitytales >= 30 && hislordship>=3 && academics >=3 && posi && watchful>=120,,
+ip,Head to the Bridge Without in the Bazaar Side-Streets.,voyage=1,,
+ip,Prepare for the expedition in Your Lodgings.,voyage=2,,
+ip,"Embark on your journey at Zee. The journey takes places on:
+
+- Corpsecage Island
+- Abby Rock
+- Bullbone Island",voyage=3,,
+ip,"Continue your journey to gather more notes, or return to your lodgings to
+**Organize your Research**. With enough research, you may be able to
+regain access to the University. The associated islands are:
+
+- Corpsecage Island
+- Abby Rock
+- Bullbone Island",voyage=4 && unwelcome,,
+c,"You've completed at least one journey of scientific discovery. This is a
+repeatable activity. You can continue your voyage or return to Your Lodgings
+to **Organize your Research** and possibly start again. The associated islands are:
+
+- Corpsecage Island
+- Abby Rock
+- Bullbone Island",voyage=4,,"Unfortunately, there aren't any qualities we can use to separate
+the first time the player goes through the voyage 2+ steps and them
+repeating those steps. Normally, that would mean I'd leave this
+out of quests as just an activity. But if you get yourself kicked out
+of the university it becomes critical path since it's tied to the lab.
+So I think it's best to have it here to signpost that process and just
+accept that users can knock it from completed back to in progress."

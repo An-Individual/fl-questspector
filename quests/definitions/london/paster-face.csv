@@ -1,0 +1,10 @@
+augcat,london,
+quest,Seeking the Meaning of the Plaster Face,plaster_face
+mappings,"story=672,dangerous=211,albinorat=673",
+ns,Something is happening at Your Lodgings.,dangerous>=90
+ip,Ratty events unfold in Your Lodgings.,story
+ip,Ambush the Big Rat in The Flit.,story=10
+ip,**Decide the fate of the Big Rat** in The Flit.,story=11
+c,You allied yourself with the Big Rat.,story=15
+ip,An epilogue awaits in the London Opportunity deck.,story=20
+c,You've defeated the Big Rat.,story=20 && albinorat

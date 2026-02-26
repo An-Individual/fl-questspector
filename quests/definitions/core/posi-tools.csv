@@ -1,0 +1,38 @@
+augcat,core,
+quest,Acquire a Ship,boat
+mappings,"boat=770,posi=716,explorer=771",
+ns,Head to Wolfstack Docks to get started.,!boat && posi
+ip,Look for **One Step Closer to Owning a Ship** in Wolfstack Docks.,boat=1
+ip,Look for **Repairs and Supplies** in Wolfstack Docks,boat=2
+ip,Look for **Finding a Crew** in Wolfstack Docks.,boat=3
+ip,Look for **Pick a Ship** in Wolfstack Docks.,boat=4
+ip,You are acquiring a ship in Wolfstack Docks.,boat>4
+c,You have a boat!,explorer
+mappings,"zpeed=142287,zub=142457,lux=142755",
+c,You've got the zoomies!,explorer && zpeed>60
+c,The lap of luxury!,explorer && lux
+c,Zub Club! Zub Club! Zub Club!,explorer && zub
+//,**********************************************************************,
+quest,The University Lab,lab
+mappings,"unwelcome=649,lab=140725,route=604,prestige=127257",
+ns,Look for *Your Own Lab* at The University to get started.,posi
+b,Pursue *A Name in Seven Secret Alphabets* to gain access to The University.,posi && !route
+b,Pursue *A Journey of Scientific Discovery* to regain access to The University.,posi && unwelcome
+ip,Complete your first experiment.,lab && !prestige
+ip,Complete your second experiment.,lab && prestige=1
+c,You have your own lab at The University!,lab && prestige>=2
+//,**********************************************************************,
+quest,A Base-Camp in Parabola,camp
+mappings,"camp=140705,prof=13615,alf=273,adeck=140943,mynp=1020",
+ns,Gain access to *The University Lab* to proceed.,posi
+ns,Complete the **Find a Route to Parabola** experiment in your University Lab.,lab
+ns,Establish a base-camp from **The Honey-Dens of Veilgarden**.,mynp && prof=34 && !lab
+ns,"Establish a base-camp from **The Honey-Dens of Veilgarden** or complete the
+**Find a Route to Parabola** experiment in your University Lab.",mynp && prof=34 && lab
+ns,Pursue your Ambition to establish a base-camp.,alf>=205 && alf<=207 && !lab
+ns,"Pursue your Ambition or complete the **Find a Route to Parabola** experiment
+in your University Lab.",alf>=205 && alf<=207 && lab
+ns,Pursue your Ambition to establish a base-camp.,adeck>=17 && adeck<=20 && !lab
+ns,"Pursue your Ambition or complete the **Find a Route to Parabola** experiment
+in your University Lab.",adeck>=17 && adeck<=20 && lab
+c,You have access to a Parabolan Base-Camp.,camp

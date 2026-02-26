@@ -1,0 +1,32 @@
+augcat,london,
+quest,The Secular Missionary,sec_miss
+mappings,"missionary=694,forgottenquarter=429,firebrand=695",
+ns,Find her in the London Opportunity deck.,!missionary
+ip,Pursue her case in the London Opportunity deck.,missionary=1
+b,Pursue her case in the London Opportunity deck.,missionary=2
+b,Pursue *A Name Written in Seven Secret Alphabets* to continue.,missionary=2 && !forgottenquarter
+ip,Pursue her case in the London Opportunity deck.,missionary>=3
+ip,Pursue her case in the London Opportunity deck.,missionary=10
+b,Pursue *The Revolutionary Firebrand* to continue.,missionary=10 && firebrand<10
+ip,Question her in Your Lodgings.,missionary=11
+c,You've learned the truth. Continue the story with *The Cave of the Nadir*.,missionary>=12
+quest,The Revolutionary Firebrand,rev_brand
+mappings,revolutionaries=133832,
+ns,Become more renown amongst Revolutionaries to meet the Firebrand.,!firebrand && missionary=10
+ns,Find him in the London Opportunity deck.,!firebrand && revolutionaries>=5
+ip,He lurks in the London Opportunity deck.,firebrand
+ip,The next step is found in the London Opportunity deck.,firebrand=10
+b,Pursue *The Secular Missionary* to continue.,firebrand=10 && missionary<10
+ip,Question him in Your Lodgings.,firebrand=11
+c,You've learned the truth. Continue the story with *The Cave of the Nadir*.,firebrand>=12
+quest,The Cave of the Nadir,cave_nadir
+mappings,nadir=23569,
+ip,Confront **The Missionary and the Firebrand** in your lodgings.,missionary=12 && firebrand=12
+ip,"Head to your Forgotten Quarter Base-Camp and launch an expedition
+to The Cave of the Nadir. Some preparation may be required.",nadir
+ip,"You've found the cave. Now you need to enter it from your Forgotten
+Quarter Base-Camp.",nadir=2
+ip,"Confront **The Missionary and the Firebrand** outside the cave in your
+Forgotten Quarter Base-Camp.",nadir=3
+c,"You've completed the stories of the Missionary and the Firebrand and found
+The Cave of the Nadir.",nadir>=3 && missionary>=30 && firebrand>=30

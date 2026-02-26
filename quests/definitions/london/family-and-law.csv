@@ -1,0 +1,25 @@
+augcat,london,
+quest,Family and Law,fam_law
+mappings,"story=1022,rendconst=1057,rendcheery=13133,favoring=1023,myns=1016",
+ns,Begin this story in The Medusa's Head or on Ladybones Road.,!story && !rendconst && !rendcheery
+ip,Meet the Last Constable on Ladybones Road.,story && rendconst
+ip,Meet the Cheery Man on Watchmaker's Hill.,story && rendcheery
+ip,Await a message in the London Opportunities deck.,story && !rendconst && !rendcheery
+ip,Await a message in the London Opportunities deck.,story=4
+b,Complete *A Name Whispered in Darkness* to continue.,story=4 && myns<7
+ip,Meet the Last Constable on Ladybones Road.,story>=5 && favoring=1
+ip,Meet the Cheery Man in the Medusa's Head.,story>=5 && favoring=2
+ip,You are approaching your destination.,story=7
+ip,You are at your destination.,story>=8
+ip,You can find the Last Constable on Ladybones Road.,story=11 && favoring=1
+ip,You can find the Cheery Man in the Medusa's Head.,story=11 && favoring=2
+ip,You are engaged in a high stakes game.,story>=12
+mappings,"constfate=135010,cheeryfate=135009,devilment=134916",
+c,You left them to resolve their dispute on their own.,story>=250
+c,You've concluded Family and Law. The Last Constable survived.,story>=250 && cheeryfate
+c,"You've concluded Family and Law. You manipulated the outcome.
+The Last Constable survived.",story>=250 && cheeryfate && devilment
+c,You've concluded Family and Law. The Cheery Man survived.,story>=250 && constfate
+c,"You've concluded Family and Law. You manipulated the outcome.
+The Cheery Man survived.",story>=250 && constfate && devilment
+c,You've concluded Family and Law. Neither party survived.,story>=250 && constfate && cheeryfate

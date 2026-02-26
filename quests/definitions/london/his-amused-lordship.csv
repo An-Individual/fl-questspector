@@ -1,0 +1,9 @@
+augcat,london,,,
+quest,His Amused Lordship,his_lordship,,"This was primarily added to tracking as a precursor to the
+Journey of Scientific Discovery which is critical path if you 
+get yourself kicked out of the university."
+mappings,"hislordship=578,persuasive=212,routepalace=427,garden=963,cities=962",,,
+ns,You can find him in the London Opportunity Deck.,!hislordship && routepalace && (cities>=5 || garden>=5 || persuasive>=69),,
+ip,He lurks in the London Opportunity Deck.,hislordship=1,,
+ip,There's a party to crash in the London Opportunity Deck.,hislordship=2,,
+c,You've cultivated a relationship with His Amused Lordship.,hislordship>=3,,

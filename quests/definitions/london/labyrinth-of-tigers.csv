@@ -1,0 +1,19 @@
+augcat,london,
+quest,The Labyrinth of Tigers,lab_tigers
+mappings,"progress=623,coil=622,dangerous=211",
+//,A Name Scrawled in Blood leads into this so we're going to skip the not started state for this one.,
+ip,Head to the labyrinth and take a look around.,progress=1
+ip,Meet Mr. Inch in the labyrinth.,progress=2
+ip,Find the labyrinth's Tiger Keeper.,progress>=3
+ip,Find the first coil of the labyrinth,progress=3&&!coil
+ip,You have business with the Tiger Keeper.,progress=7
+ip,Interview a tiger in the labyrinth's second coil.,progress=8
+b,Increase your Dangerous to proceed.,progress=8 && dangerous<104
+ip,Look around the labyrinth's third coil.,progress=9
+ip,There are things to do in the labyrinth's third coil.,progress>=10
+ip,"**Chat with Local Gossip** in your Lodgings and discuss The Hound of
+Heaven with the Clay Coalman.",progress=13
+b,Increase your Dangerous to proceed.,progress=13 && dangerous<110
+ip,The fourth coil of the Labyrinth is open to you.,progress>=14
+c,"You've delved the secrets of the Labyrinth of Tigers. If you wish to 
+go deeper, consider associating with some radical academics.",progress>=16

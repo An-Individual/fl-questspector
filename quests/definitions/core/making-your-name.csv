@@ -1,0 +1,101 @@
+augcat,core,,,
+mappings,"myn=1018,nmc=144074,ott=144073,tttc=144075,eiac=10632",,,"The wiki is kind of unclear on whether
+case are tracked with Engaged in a Case (eiac)
+or Engaged in a Name-Making Case (nmc). So 
+where I've found values for both I've used both
+and ORed them."
+quest,Making Your Name: A Name in Seven Secret Alphabets,mynw,,
+ns,Look for a Making Your Name storylet on Ladybones Road.,!myn,,
+ip,Pursue the Honey-Addled Detective on Moloch Street.,!myn && (nmc=1 || eiac=2),,
+ip,Look for a Making Your Name storylet on Ladybones Road.,myn=1,,
+ip,Pursue the Tattooed Courier on Moloch Street.,myn=1 && nmc=2,,
+ip,Locate the Tattooed Courier at Mrs Plenty's Carnival.,myn=1 && tttc=4,,
+ip,"The Honey-Addled Detective has a Making Your Name 
+case for you on Moloch Street.",myn=2,,
+ip,Pursue the Case of the Absconding Devil on Moloch Street.,myn=2 && (nmc=3 || eiac=3),,
+ip,Another case awaits within **Life on Ladybones Road**.,myn=3,,
+ip,Pursue the Case of the Disappearing Heiress on Moloch Street.,myn=3 && eiac=5,,
+ip,Look for a Making Your Name storylet on Ladybones Road.,myn=4,,
+mappings,"arch=503,cstones=506",,,
+ip,Head to the Forgotten Quarter or Base-Camp. Learn the traditions.,myn=5,,The quality that tracks if Base-Camp is visible is hidden.
+ip,"Embark on expeditions from your Forgotten Quarter 
+base-camp to increase Archaeologist.",myn=5 && arch,,
+ip,"Embark on an expedition to The Tomb of the Seven from your 
+Forgotten Quarter base-camp.",myn=5 && arch >= 3,,
+ip,"Look for a Making Your Name storylet in your Forgotten Quarter
+base-camp.",myn=5 && cstones,,
+mappings,univtales=600,,,
+ip,Head to The University,myn=6,,
+ip,Look for Making Your Name storylets in The University.,myn=6 && univtales>4,,
+c,You've completed the Watchful branch of Making Your Name!,myn>=7,,
+//,**********************************************************************,,,
+quest,Making Your Name: A Name Whispered in Darkness,myns,,
+mappings,"myn=1016,muckraking=731",,,
+ns,Look for a Making Your Name storylet in Spite.,!myn,,
+ip,"Head to Spite and look for **Cat-catching!** or chat with 
+The Careworn Journalist.",myn=1 && !muckraking,,
+ip,"Head to Spite and look for **Cat-catching!** or storylets unlocked
+my **Raking the Muck of the Neath**.",myn=1 && muckraking,,
+ip,"Engage in Area-Diving! If you haven't unlocked it, look for a
+Making Your Name storylet in Spite.",myn=2,,"This is another case where the qualities that
+track if the player has pushed a button are hidden."
+ip,Look for a Making Your Name storylet in The Flit.,myn=3,,
+ip,Look to a Making Your Name storylet in The Flit for instructions.,myn=4,,
+mappings,heist=10065,,,
+ip,"There's a Making Your Name heist waiting for you. Find **Plan a Heist**
+on the map or in **Preparing for a Big Score** in The Flit.",myn=5,,
+ip,"Prepare for and embark on your heist via **Preparing for a Big
+Score** in The Flit.",myn=5 && heist=3,,
+mappings,illusion=575,,,
+ip,Head to **The Heights of Chicanery** in The Flit.,myn=6 && illusion<6,,
+ip,Head to **Bats and Cats** in The Flit.,myn=6 && illusion>=6,,
+c,You've completed the Shadowy branch of Making Your Name!,myn>=7,,
+//,**********************************************************************,,,
+quest,Making Your Name: A Name Scrawled in Blood,mynd,,
+mappings,"myn=1015,quarry=22333,spiders=241,vermin=109668",,,
+ns,"Look for a Making Your Name storylet on Watchmaker's Hill and
+head to The Department of Menace Eradication.",!myn,,Another case where a route quality is hidden
+ip,Hunt a Worryingly Large Rat in The Department of Menace Eradication.,!myn && quarry=1,,
+ip,"Another Making Your Name hunt is available in The Department of
+Menace Eradication.",myn=1,,
+ip,Battle Sorrow-Spiders in The Department of Menace Eradication.,myn=1 && spiders,,
+ip,Look for a Making Your Name storylet on Watchmaker's Hill.,myn=2,,
+ip,Your lodgings have been infested with rats!,myn=2 && vermin,,
+ip,Look for a Making Your Name storylet on Watchmaker's Hill.,myn=3,,
+ip,Look for a Making Your Name storylet in Wolfstack Docks.,myn=4,,
+mappings,"blackribbon=547,duelist=548",,,
+ip,Look for a Making Your Name storylet in Wolfstack Docks.,myn=5,,
+ip,Look for a Making Your Name storylet in The Blind Helmsman,myn=5 && blackribbon=1,,
+ip,Become a more fearsome duelist in The Blind Helmsman.,myn=5 && blackribbon>=2 && duelist < 5,,
+mappings,"tigers=569,beasts=570,labyrinth=623",,,
+ip,Look for a Making Your Name storylet in Wolfstack Docks.,myn=6,,
+ip ,"You must become a greater Procurer of Savage Beasts. 
+**Hunt Dangerous Prey** in Wolfstack Docks. Prey can be found in:
+
+- Watchmaker's Hill
+- Spite
+- The Flit
+- Veilgarden
+- Wolfstack Docks",myn=6 && tigers && beasts<5,,
+ip,Find Mr. Inch in The Labyrinth of Tigers,myn=6 && labyrinth,,
+c,You've completed the Dangerous branch of Making Your Name!,myn>=7,,
+//,**********************************************************************,,,
+quest,Making Your Name: A Name Signed with a Flourish,mynf,,
+mappings,"myn=1020,workingon=627",,,
+ns,Look for a Making Your Name storylet in The Singing Mandrake.,!myn,,
+ip,Look for a Making Your Name storylet in Veilgarden.,myn=1,,
+ip,Look for a Making Your Name storylet in Veilgarden or Your Activities.,myn=2,,
+ip ,"Work on your story in Your Activities. (The bee icon in the bottom right
+corner of the map.)",myn=2 && workingon,,
+ip,Look for a Making Your Name storylet in Veilgarden.,myn=3,,
+ip,Look for a Making Your Name storylet in The Shuttered Palace.,myn=4,,
+ip,Look for a Making Your Name storylet in The Empress' Court.,myn=5,,
+mappings,reputation=626,,,
+ip,Look for **A slow day** in The Empress' Court.,myn=6,,
+ip,"Head to The Empress' Court and create works of art to increase your
+reputation.",myn=6 && reputation<4,,
+ip,You've been **Called to the Office** in The Empress' Court.,myn=6 && reputation=4,,
+ip,You have **a weighty decision** to make in The Empress' Court.,myn=6 && reputation=5,,
+ip,Decide **why you are doing this** in The Empress' Court.,myn=6 && reputation=6 && !workingon,,
+ip,Complete your opera in The Empress' Court.,myn=6 && reputation=6 && workingon,,
+c,You've completed the Persuasive branch of Making Your Name!,myn>=7,,

@@ -1,0 +1,23 @@
+augcat,london,
+quest,The Jack-of-Smiles Case,jack_smiles
+mappings,"squad=870,velocipede=769,dangerous=211,spinning=886",
+ns,"The first step is to join the Velocipede Squad via a card in the London
+Opportunity deck or by speaking to the Clay Coalman via **Chat with 
+the Local Gossip** in Your Lodgings.",velocipede && dangerous >=120 && !squad && !spinning>=9
+mappings,"story=1074,posi=716,gone=1080",
+ns,Now you can offically start the case by talking to the inspector on Ladybones Road.,!story && squad && posi
+ip,"Progress the case by seeking breakthroughs in Concord Square or the faction
+cards in the London Opportunity deck. Then advance the case on Ladybones Road.",story
+ip,"You've become Jack! This is FATE-locked content so Quests
+won't provide guidance on it. See you on the other side!",story>=7
+ip,Speak to the inspector about Jack's origin.,story=9
+ip,Progress the case across the zee in Polythreme.,story>=10
+ip,You've chosen to destroy the source of Jack's knives in Polythreme.,story=13
+ip,Return to the inspector on Ladybones Road.,story=14
+ip,Follow the trail back to Veilgarden.,story=15
+ip ,Seek out Mr Spices in the Bazaar Side-Streets.,story=16
+ip,Consider the aftermath in Your Lodgings.,story=17
+ip,"You've chosen to defeat Jack completely. This is FATE-locked content so Quests
+won't provide guidance on it. See you on the other side!",story>=18
+c,You've solve the case! But Jack still lingers.,story>=20
+c,You've solved the case and Jack is no more!,story>=20 && gone

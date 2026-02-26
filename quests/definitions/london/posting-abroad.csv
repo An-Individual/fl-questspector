@@ -1,0 +1,17 @@
+augcat,london,
+quest,A Posting Abroad,posting_abroad
+mappings,"posi=716,persuasive=212,banished=636,diplomat=872,route=859,governor=119386,legitimacy=118808,timepassing=118811,restored=134833",
+ns,"Head to **Chat with Local Gossip** in Your Lodgings and ask the Bohemian
+Sculptress about a posting with the Foreign Office.",posi&&banished&&!diplomat&&persuasive>=115
+ip,"Head to The Foreign Office and work towards a foreign posting. Surely you can
+convince them to send you abroad.",route && !governor
+ip,Zail to Port Carnelian to begin your term in office.,legitimacy
+ip,You're a governor! I'm sure everything is fine and normal.,timepassing
+ip,"You've completed a successful term as Governor of Port Carnelian! Again! Again!
+
+*(If you didn't sign on for another term you'll need to return to The Foreign Office first.)*",governor=1
+ip,"You've completed multiple terms as Governor of Port Carnelian! 
+Can you pull off a state dinner next time?
+
+*(If you didn't sign on for another term you'll need to return to The Foreign Office first.)*",governor>=2
+c,You've held a state dinner in Port Carnelian and been restored to the Empress' Court!,restored

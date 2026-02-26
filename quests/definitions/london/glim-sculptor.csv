@@ -1,0 +1,10 @@
+augcat,london,
+quest,The Solitary Glim-sculptor,glim_sculptor
+mappings,"story=667,university=600",
+ns,A card in the London Opportunity deck begins this story.,!story && university>=30
+ip,Work the case in Spite.,story
+ip,Work the case in the London Opportunity deck.,story>=3
+ip,Consider **the missing squeezebox** in Spite.,story=5
+ip,Make a decision in Spite.,story=6
+ip,Await a prologue in the London Opportunity deck.,story=7
+c,You've completed the story of the Solitary Glim-sculptor.,story>=8
