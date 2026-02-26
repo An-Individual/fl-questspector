@@ -1,5 +1,4 @@
 import { QuestStates } from "../../datatypes.js";
-import { ModalManager } from "./modal-manager.js";
 import { TextFormatter } from "./text-formatter.js";
 
 export class ElementRenderer {
@@ -51,40 +50,40 @@ export class ElementRenderer {
         let statusElem;
         switch(quest.state){
             case QuestStates.NotStart:
-                statusElem = this.makeElementFromHTML(`<div class="flq-quest-status flq-notstarted"><div>Not Started</div></div>`);
+                statusElem = this.makeElementFromHTML(`<div class="quest-status notstarted"><div>Not Started</div></div>`);
                 break;
             case QuestStates.HiddenStatus:
-                statusElem = this.makeElementFromHTML(`<div class="flq-quest-status flq-hiddenstatus"><div>Hidden</div></div>`);
+                statusElem = this.makeElementFromHTML(`<div class="quest-status hiddenstatus"><div>Hidden</div></div>`);
                 break;
             case QuestStates.InProgress:
-                statusElem = this.makeElementFromHTML(`<div class="flq-quest-status flq-inprogress"><div>In Progress</div></div>`);
+                statusElem = this.makeElementFromHTML(`<div class="quest-status inprogress"><div>In Progress</div></div>`);
                 break;
             case QuestStates.Blocked:
-                statusElem = this.makeElementFromHTML(`<div class="flq-quest-status flq-blocked"><div>Blocked</div></div>`);
+                statusElem = this.makeElementFromHTML(`<div class="quest-status blocked"><div>Blocked</div></div>`);
                 break;
             case QuestStates.Completed:
-                statusElem = this.makeElementFromHTML(`<div class="flq-quest-status flq-completed"><div>Completed</div></div>`);
+                statusElem = this.makeElementFromHTML(`<div class="quest-status completed"><div>Completed</div></div>`);
                 break;
             default:
-                statusElem = this.makeElementFromHTML(`<div class="flq-quest-status"><div>ERROR</div></div>`);
+                statusElem = this.makeElementFromHTML(`<div class="quest-status"><div>ERROR</div></div>`);
         }
 
-        let toggleElem = this.makeElementFromHTML(`<div class="flq-quest-toggle">+</div>`);
+        let toggleElem = this.makeElementFromHTML(`<div class="quest-toggle">+</div>`);
 
-        let mainElem = this.makeElement("div", "flq-quest-main flq-clickable", [
+        let mainElem = this.makeElement("div", "quest-main clickable", [
             toggleElem,
-            this.makeTextElement("div", "flq-quest-title", quest.title, false),
+            this.makeTextElement("div", "quest-title", quest.title, false),
             statusElem
         ]);
 
         let detailElems = [];
         let toRender = [];
 
-        let descriptionElem = this.makeElement("div", "flq-quest-detail", []);
+        let descriptionElem = this.makeElement("div", "quest-detail", []);
         descriptionElem.flqToRender = quest.details;
         toRender.push(descriptionElem);
         if(quest.subtasks?.length > 0){
-            descriptionElem.classList.add("flq-quest-detail-line");
+            descriptionElem.classList.add("quest-detail-line");
         }
         detailElems.push(descriptionElem);
 
@@ -96,23 +95,23 @@ export class ElementRenderer {
                     let asInt = Math.round(task.percentage * 100);
                     asInt = asInt > 100 ? 100 : asInt;
                     asInt = asInt < 0 ? 0 : asInt;
-                    statusElem = this.makeElementFromHTML(`<div class="flq-subtask-status">${asInt}%</div>`);
+                    statusElem = this.makeElementFromHTML(`<div class="subtask-status">${asInt}%</div>`);
                 } else if(task.completed){
-                    statusElem = this.makeElementFromHTML(`<div class="flq-subtask-status">${ElementRenderer.CharacterCodes.Checkmark}</div>`);
+                    statusElem = this.makeElementFromHTML(`<div class="subtask-status">${ElementRenderer.CharacterCodes.Checkmark}</div>`);
                 } else {
-                    statusElem = this.makeElementFromHTML(`<div class="flq-subtask-status" />`);
+                    statusElem = this.makeElementFromHTML(`<div class="subtask-status" />`);
                 }
 
-                let subDescriptionElem = this.makeElement("div", "flq-subtask-description", []);
+                let subDescriptionElem = this.makeElement("div", "subtask-description", []);
                 subDescriptionElem.flqToRender = task.description;
                 toRender.push(subDescriptionElem);
-                let taskElem = this.makeElement("div", "flq-subtask", [
+                let taskElem = this.makeElement("div", "subtask", [
                     subDescriptionElem,
                     statusElem
                 ])
 
                 if(taskIndex % 2 == 1){
-                    taskElem.classList.add("flq-subtask-offsetrow");
+                    taskElem.classList.add("subtask-offsetrow");
                 }
                 taskIndex++;
 
@@ -120,7 +119,7 @@ export class ElementRenderer {
             });
         }
 
-        let detailsElem = this.makeElement("div", "flq-quest-details", detailElems)
+        let detailsElem = this.makeElement("div", "quest-details", detailElems)
 
         mainElem.onclick = function(){
             if(!detailsElem.style.display || detailsElem.style.display == "none")
@@ -140,7 +139,7 @@ export class ElementRenderer {
             }
         };
 
-        return this.makeElement("div", "flq-quest", [
+        return this.makeElement("div", "quest", [
             mainElem,
             detailsElem
         ]);
@@ -165,21 +164,21 @@ export class ElementRenderer {
             return;
         }
 
-        let result = this.makeElement("div", "flq-cat", []);
+        let result = this.makeElement("div", "cat", []);
 
-        let titleElem = this.makeTextElement("div", "flq-cat-title", `${category.title} (${completed}/${category.quests.length})`, false);
-        let titleExpandElem = this.makeElementFromHTML(`<div class="flq-cat-expand">${ElementRenderer.CharacterCodes.TriangleUp}</div>`);
-        let expandableElem = this.makeElement("div", "flq-cat-titlebar-sub", [titleElem, titleExpandElem]);
+        let titleElem = this.makeTextElement("div", "cat-title", `${category.title} (${completed}/${category.quests.length})`, false);
+        let titleExpandElem = this.makeElementFromHTML(`<div class="cat-expand">${ElementRenderer.CharacterCodes.TriangleUp}</div>`);
+        let expandableElem = this.makeElement("div", "cat-titlebar-sub", [titleElem, titleExpandElem]);
 
         if(completedElems.length > 0) {
             let completedBar = this.makeElementFromHTML(`
-                <div class="flq-cat-completed-bar flq-clickable">
-                    <div class="flq-cat-completed-toggle"></div>
-                    <div class="flq-cat-completed-title">Completed (${completedElems.length})</div>
-                    <div class="flq-cat-completed-toggle"></div>
+                <div class="cat-completed-bar clickable">
+                    <div class="cat-completed-toggle"></div>
+                    <div class="cat-completed-title">Completed (${completedElems.length})</div>
+                    <div class="cat-completed-toggle"></div>
                 </div>`);
-            let completedToggleElems = completedBar.getElementsByClassName("flq-cat-completed-toggle");
-            let completedQuestsElem = this.makeElement("div", "flq-cat-completed-quests", completedElems);
+            let completedToggleElems = completedBar.getElementsByClassName("cat-completed-toggle");
+            let completedQuestsElem = this.makeElement("div", "cat-completed-quests", completedElems);
             completedQuestsElem.style.display = "none";
             completedToggleElems[0].innerHTML = ElementRenderer.CharacterCodes.TriangleDown;
             completedToggleElems[1].innerHTML = ElementRenderer.CharacterCodes.TriangleDown;
@@ -200,8 +199,8 @@ export class ElementRenderer {
             questElems.push(completedQuestsElem);
         }
 
-        let titleBarElem = this.makeElement("div", "flq-cat-titlebar flq-clickable", [expandableElem]);
-        let questsElem = this.makeElement("div", "flq-cat-quests", questElems);
+        let titleBarElem = this.makeElement("div", "cat-titlebar clickable", [expandableElem]);
+        let questsElem = this.makeElement("div", "cat-quests", questElems);
 
         if(isHidden) {
             menuButtonElem.style.opacity = 0.5;

@@ -138,7 +138,7 @@ a:hover {
   display: none;
 }
 
-.flq-title {
+.title {
     margin-top: 20px;
     text-align: center;
     font-size: 2.5em;
@@ -146,34 +146,34 @@ a:hover {
     user-select: none;
 }
 
-.flq-subtitle-links {
+.subtitle-links {
     text-align: center;
     margin-bottom: 5px;
     font-size: 1em;
     user-select: none;
 }
 
-.flq-tab-selected
+.tab-selected
 {
     font-weight: bold;
 }
 
-.flq-tab-notselected
+.tab-notselected
 {
     font-weight: bold;
     color: #3f7277;
 }
 
-.flq-tab-notselected:hover
+.tab-notselected:hover
 {
     color: #254245;
 }
 
-.flq-body {
+.body {
     margin: 20px;
 }
 
-#flq-close {
+#close {
     color: black;
     font-size: 2.5em;
     font-weight: bold;
@@ -183,16 +183,16 @@ a:hover {
     right: 10px;
 }
 
-.flq-clickable {
+.clickable {
     user-select: none;
 }
 
 
-.flq-cat {
+.cat {
     margin-bottom: 20px;
 }
 
-.flq-cat-titlebar {
+.cat-titlebar {
     position: relative;
     display: flex;
     width: 100%;
@@ -202,55 +202,22 @@ a:hover {
     box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
 }
 
-.flq-cat-titlebar-sub {
+.cat-titlebar-sub {
     flex: 1 1 auto;
     display: flex;
     align-items: stretch;
 }
 
-.flq-cat-menu-button {
-    width: 30px;
-    flex: 0 0 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.flq-cat-menu {
-    position: absolute;
-    z-index: 501; /* The modal is 500 */
-    top: 0px;
-    left: 30px;
-    background-color: #000;
-    color: #d5d5d5;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-}
-
-.flq-cat-menu-item {
-    padding: 5px;
-}
-
-.flq-cat-menu-item span {
-    display: inline-block;
-    width: 18px;
-    text-align: center;
-}
-
-.flq-cat-menu-item:hover {
-    background-color: #3f3f3f;
-}
-
-.flq-cat-title {
+.cat-title {
     flex: 1 1 auto;
     min-width: 0;
     padding: 5px;
+    margin-left: 5px;
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.flq-cat-expand {
+.cat-expand {
     width: 30px;
     flex: 0 0 30px;
     display: flex;
@@ -258,11 +225,11 @@ a:hover {
     align-items: center;
 }
 
-.flq-cat-completed-quests {
+.cat-completed-quests {
     display: block;
 }
 
-.flq-cat-completed-bar {
+.cat-completed-bar {
     display: flex;
     width: 100%;
     align-items: stretch;
@@ -270,7 +237,7 @@ a:hover {
     box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
 }
 
-.flq-cat-completed-title {
+.cat-completed-title {
     flex: 1 1 auto;
     min-width: 0;
     padding: 5px 0;
@@ -281,7 +248,7 @@ a:hover {
     align-items: center;
 }
 
-.flq-cat-completed-toggle {
+.cat-completed-toggle {
     width: 30px;
     flex: 0 0 30px;
     text-align: center;
@@ -289,21 +256,20 @@ a:hover {
     font-weight: bold;
 }
 
-.flq-quest-main {
+.quest-main {
     display: flex;
     width: 100%;
-    align-items: stretch;
     background-color: #e8dac3;
     box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
 }
 
-.flq-quest-status {
+.quest-status {
     width: 100px;
     flex: 0 0 100px;
-    margin: auto;
+    margin-right: 7px;
 }
 
-.flq-quest-status div {
+.quest-status div {
     width: 90px;
     margin: 5px auto;
     padding: 5px;
@@ -311,7 +277,7 @@ a:hover {
     border: 1px solid #000000;
 }
 
-.flq-quest-toggle {
+.quest-toggle {
     width: 20px;
     flex: 0 0 20px;
     text-align: center;
@@ -319,7 +285,7 @@ a:hover {
     font-weight: bold;
 }
 
-.flq-quest-title {
+.quest-title {
     flex: 1 1 auto;
     min-width: 0;
     padding: 5px 0;
@@ -327,57 +293,57 @@ a:hover {
     font-weight: bold;
 }
 
-.flq-hiddenstatus div {
+.hiddenstatus div {
     visibility: hidden;
 }
 
-.flq-inprogress div {
+.inprogress div {
     background-color: #ddd200;
     color: #000000;
 }
 
-.flq-blocked div {
+.blocked div {
     background-color: #636363;
     color: #ffffff;
 }
 
-.flq-completed div {
+.completed div {
     background-color: #2c9c00;
     color: #ffffff;
 }
 
-.flq-quest-details {
+.quest-details {
     display: none;
     background-color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
     margin-left: 20px;
 }
 
-.flq-quest-detail {
+.quest-detail {
     padding: 5px 10px;
 }
 
-.flq-quest-detail-line {
+.quest-detail-line {
     border-bottom: 1px solid #808080;
 }
 
-.flq-subtask {
+.subtask {
     display: flex;
     width: 100%;
     align-items: stretch;
 }
 
-.flq-subtask-offsetrow {
+.subtask-offsetrow {
     background-color: #eeeeee;
 }
 
-.flq-subtask-description {
+.subtask-description {
     flex: 1 1 auto;
     min-width: 0;
     padding: 5px 10px;
 }
 
-.flq-subtask-status {
+.subtask-status {
     width: 50px;
     flex: 0 0 50px;
     display: flex;
@@ -388,59 +354,59 @@ a:hover {
     border-left: 1px solid #808080;
 }
 
-#flq-error-title {
+#error-title {
     font-size: 2em;
     font-weight: bold;
 }
 
-#flq-error-trace {
+#error-trace {
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 0.7em;
     margin-left: 5px;
 }
 
-.flq-body ul {
+.body ul {
     padding-left: 1rem;
     list-style-type: disc;
     margin: 5px 0 5px;
 }
 
-.flq-body ul ul {
+.body ul ul {
     list-style-type: circle;
     margin-bottom: 0;
 }
 
-.flq-body ul ul ul {
+.body ul ul ul {
     list-style-type: square;
     margin-bottom: 0;
 }
 
-.flq-settings-title {
+.settings-title {
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.flq-settings-group {
+.settings-group {
     margin-bottom: 10px;
 }
 
-.flq-settings-body {
+.settings-body {
     margin-left: 20px;
 }
 
-#flq-quest-import-panel {
+#quest-import-panel {
     display: none;
 }
 
-#flq-quest-import-panel {
+#quest-import-panel {
     margin-top: 5px;
 }
 
-#flq-qsource-address {
+#qsource-address {
     width: 100%;
 }
 
-#flq-import-state {
+#import-state {
     font-family: "Lucida Console", "Courier New", monospace;
     border: 1px solid #000;
     margin-top: 5px;
@@ -450,7 +416,7 @@ a:hover {
     white-space: pre-wrap;
 }
 
-.flq-version-outer {
+.version-outer {
     max-width: 378px;
     margin: 0 auto 20px;
     padding: 5px;
@@ -458,7 +424,7 @@ a:hover {
 
 }
 
-.flq-version-border {
+.version-border {
     position: relative;
     height: 100%;
     border: 2px solid #bdb29eff;
@@ -469,11 +435,11 @@ a:hover {
     color: #bdb29eff;
 }
 
-#flq-version {
+#version {
     white-space: pre-wrap;
 }
 
-#flq-marquee {
+#marquee {
     width: 30px;
     height: 30px;
     display: block;
