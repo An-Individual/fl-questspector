@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <header>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,300i,400,400i,500,600,600i,700,700i" rel="stylesheet">
@@ -17,7 +18,18 @@
         <div class="core-box">
             <div class="core-outline">
                 <div class="page" id="page-upload">
-                    Upload Page
+                    <p>
+                        Questspector takes character data exported by the <a href="https://github.com/An-Individual/fl-sheetifier">Fallen London Sheetifier</a>
+                        browser extension and uses it to generate a rough summary of your character's
+                        current progress in the game's storylines. Just upload you CSV file below to begin.
+                    </p>
+                    <label id="drop-zone">
+                        Drop CSV file here, or click to upload.
+                        <input type="file" id="file-input" accept="text/csv,.csv" />
+                    </label>
+                    <p>
+                        <i>Summary generation takes place client side within your browser. Your file won't leave your device.</i>
+                    </p>
                 </div>
                 <div class="page" id="page-quests">
                     Quests Page

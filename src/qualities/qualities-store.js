@@ -1,4 +1,4 @@
-import { CSVReader } from "../csv/csv-reader";
+import { CSVReader } from "../csv/csv-reader.js";
 
 export class QualitiesStore {
     
@@ -28,7 +28,7 @@ export class QualitiesStore {
                 for(let i = 0; i < reader.row.length; i++) {
                     quality[columns[i]] = reader.row[i];
                 }
-                list.push();
+                list.push(quality);
             }
         }
 

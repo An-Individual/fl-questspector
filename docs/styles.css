@@ -7,6 +7,33 @@ body {
     font-size: 16px;
 }
 
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+p {
+    margin: 5px 0 5px;
+}
+
+code {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #9c9483;
+    color: #000;
+}
+
+a {
+    font-weight: bold;
+    color: #3f7277;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #254245;
+}
+
 .clickable {
     user-select: none;
 }
@@ -81,7 +108,6 @@ body {
 .core-outline {
     position: relative;
     margin: 0px;
-    height: 100%;
     border: 2px solid #897d67;
     padding: 0px;
     box-sizing: border-box;
@@ -89,6 +115,27 @@ body {
 
 .page {
     display: none;
+    margin: 20px;
+}
+
+#drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    height: 200px;
+    padding: 1em;
+    border: 2px solid #897d67;
+    border-radius: 4px;
+    color: #000;
+    background-color: #9c9078;
+    cursor: pointer;
+    margin: 20px 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+}
+
+#file-input {
+  display: none;
 }
 
 .flq-title {
@@ -441,30 +488,4 @@ body {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.flq-body h1 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.flq-body p {
-    margin: 5px 0 5px;
-}
-
-.flq-body code {
-    font-family: "Lucida Console", "Courier New", monospace;
-    background-color: #9c9483;
-    color: #000;
-}
-
-.flq-body a {
-    font-weight: bold;
-    color: #3f7277;;
-}
-
-.flq-body a:hover {
-    font-weight: bold;
-    color: #254245;
 }

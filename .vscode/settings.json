@@ -2,6 +2,7 @@
     "files.exclude": {
         "node_modules": true,
         "docs/quests.json": true,
-        "docs/questspector.js": true
+        "docs/questspector.js": true,
+        "docs/questspector.js.map": true
     }
 }
