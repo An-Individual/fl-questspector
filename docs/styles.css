@@ -104,6 +104,7 @@ a:hover {
     background-color: #bdb29e;
     color: #282520;
     box-sizing: border-box;
+    min-height: -webkit-fill-available;
 }
 
 .core-outline {
