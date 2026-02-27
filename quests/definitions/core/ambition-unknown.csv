@@ -1,0 +1,6 @@
+augcat,core,
+quest,Ambition: ???,amb_unknown
+mappings,"fingers=273,desire=271,nemesis=274,legend=272",
+ns,"You have not yet chosen an Ambition. Take your time. This is
+one of the most cosequential decisions you'll make for your
+Character and once made it cannot be changed without Fate.",!fingers && !desire && !nemesis && !legend
