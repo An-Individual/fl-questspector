@@ -10,7 +10,7 @@
   "type": "module",
   "scripts": {
     "build": "npx webpack --config webpack.config.js && node ./quests/compile-quests.js",
-    "debug": "npx webpack --config webpack.config.js && node ./quests/compile-quests.js && npx http-server -c-1 ./dev",
+    "debug": "npx webpack --config webpack.config.js && node ./quests/compile-quests.js && npx http-server -c-1 ./dev -o",
     "test": "mocha --recursive",
     "deploy": "npx webpack --config webpack.config.js && node ./quests/compile-quests.js && node ./deploy.js"
   }

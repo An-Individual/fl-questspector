@@ -31,7 +31,7 @@ export class QuestsManager {
         try {
             this.fetching = true;
 
-            const response = await fetch("/quests.json");
+            const response = await fetch("quests.json");
 
             if(!response.ok) {
                 throw new Error("HTTP error: " + response.status);

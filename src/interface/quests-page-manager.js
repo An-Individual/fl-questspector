@@ -2,6 +2,7 @@ import { QuestsManager } from "../quests/quests-manager.js"
 import { QuestsRenderer } from "../quests/quests-renderer.js";
 import { ElementRenderer } from "./helpers/element-renderer.js";
 import { HelpPageManager } from "./help-page-manager.js";
+import { TextFormatter } from "./helpers/text-formatter.js";
 
 export class QuestsPageManager {
     static initialize() {
