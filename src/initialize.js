@@ -8,12 +8,6 @@ function initialize() {
     UploadPageManager.initialize();
 }
 
-function modalCheckForDOM() {
-    if (document.body && document.head) {
-        initialize();
-    } else {
-        requestIdleCallback(modalCheckForDOM);
-    }
-}
-
-requestIdleCallback(modalCheckForDOM);
+document.addEventListener("DOMContentLoaded", (event) => {
+	initialize();
+});
