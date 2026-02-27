@@ -3,6 +3,7 @@
         "node_modules": true,
         "dev/quests.json": true,
         "dev/questspector.js": true,
-        "dev/questspector.js.map": true
+        "dev/questspector.js.map": true,
+        "docs": true
     }
 }
