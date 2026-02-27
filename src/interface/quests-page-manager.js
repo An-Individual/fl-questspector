@@ -1,18 +1,26 @@
 import { QuestsManager } from "../quests/quests-manager.js"
 import { QuestsRenderer } from "../quests/quests-renderer.js";
 import { ElementRenderer } from "./helpers/element-renderer.js";
+import { HelpPageManager } from "./help-page-manager.js";
 
 export class QuestsPageManager {
     static initialize() {
         QuestsPageManager.quests = new QuestsManager();
-        QuestsPageManager.quests.getQuests();
+        QuestsPageManager.initQuests();
+    }
+
+    static async initQuests() {
+        const quests = await QuestsPageManager.quests.getQuests();
+        HelpPageManager.updateVersionBox(quests);
     }
 
     static async renderFromQualities(qualities) {
         try {
             const quests = await QuestsPageManager.quests.getQuests();
+
+            HelpPageManager.updateVersionBox(quests, qualities);
+
             const renderer = new QuestsRenderer(qualities);
-            
             const rendered = renderer.renderQuests(quests);
 
             const elemRenderer = new ElementRenderer();

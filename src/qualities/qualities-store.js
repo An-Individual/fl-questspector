@@ -51,4 +51,8 @@ export class QualitiesStore {
         }
         return this.qualities[id]?.[property] ?? 0;
     }
+
+    getCount() {
+        return Object.keys(this.qualities).length;
+    }
 }
