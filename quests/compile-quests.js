@@ -5,7 +5,7 @@ import * as fs from "fs";
 const parser = new QuestsCSVParser();
 const validator = new QuestsValidator();
 const definitionsDir = "./quests/definitions/";
-const outputFile = "./docs/quests.json"
+const outputFile = "./dev/quests.json"
 
 const version = fs.readFileSync(definitionsDir + "version.txt").toString().trim();
 if(!version) {

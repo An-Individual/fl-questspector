@@ -1,6 +1,6 @@
-docs/quests.json
-docs/questspector.js
-docs/questspector.js.map
+dev/quests.json
+dev/questspector.js
+dev/questspector.js.map
 
 # Logs
 logs

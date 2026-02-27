@@ -8,7 +8,7 @@ export default {
   entry: "./src/initialize.js",
   output: {
     filename: "questspector.js",
-    path: path.resolve(__dirname, "docs"),
+    path: path.resolve(__dirname, "dev"),
   },
   mode: "production",
   devtool: [
