@@ -13,5 +13,8 @@ export default {
   mode: "production",
   devtool: [
     { type: "javascript", use: "source-map" }
-  ]
+  ],
+  optimization:{
+    minimize: false
+  }
 };
