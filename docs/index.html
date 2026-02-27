@@ -19,9 +19,13 @@
             <div class="core-outline">
                 <div class="page" id="page-upload">
                     <p>
-                        Questspector takes character data exported by the <a target="_blank" href="https://github.com/An-Individual/fl-sheetifier">Fallen London Sheetifier</a>
+                        Questspector is a 3rd party tool that takes character data exported by the 
+                        <a target="_blank" href="https://github.com/An-Individual/fl-sheetifier">Fallen London Sheetifier</a>
                         browser extension and uses it to generate a rough summary of your character's
                         current progress in the game's storylines. Just upload you CSV file below to begin.
+                    </p>
+                    <p>
+                        <i>Note: The tool is incomplete. At the moment the bulk of the documented quests are found in London during the early and mid game.</i>
                     </p>
                     <label id="drop-zone">
                         Drop CSV file here, or click to upload.
@@ -37,7 +41,128 @@
                     </div>
                 </div>
                 <div class="page" id="page-help">
-                    Help Page
+                    <div class="version-outer">
+                        <div class="version-border">
+                            <div style="text-align: center;">Fallen London Questspector</div>
+                            <div id="version">Initializing...</div>
+                        </div>
+                    </div>
+                    <p>
+                        <i>
+                            Note: This tool is currently in beta. The quest list is incomplete and almost certainly riddled
+                            with bugs and typos.
+                        </i>
+                    </p>
+                    <h1>I'm seeing an error</h1>
+                    <p>That shouldn't be happening. See below for information on how to report an issue.</p>
+                    <h1>A quest state is wrong / giving incorrect advice / has a typo.</h1>
+                    <p>
+                        Another reportable issue. See below. Quest documentation is difficult since  
+                        there isn't a way to easily take a character through that specific narrative
+                        beat to confirm what the player will be seeing. Mistakes are inevitable and 
+                        spreadsheet programs aren't known for catching the mistakes of traitorous
+                        fingers.
+                    </p>
+                    <h1>A storyline is missing</h1>
+                    <p>
+                        This is to be expected. There's a list of known missing storylines at the bottom
+                        of this page. If you don't see it there, it might be worth reporting as it's been
+                        easy to overlook the game's smaller and more obscure stories.
+                    </p>
+                    <p>
+                        Note that not everything in the game counts as a story. Some things are just activites.
+                        A good marker for whether something counts as a story is if there's a quality that tracks
+                        it in the Stories section of your Myself page and it isn't repeatable.
+                    </p>
+                    <h1>How do I report an issue?</h1>
+                    <p>
+                        The most reliable way is to create an issue on the 
+                        <a target="_blank" href="https://github.com/An-Individual/fl-questspector">Questspector Github</a>. 
+                        Before creating your issue, please do a quick search to see if it has already been reported. Your
+                        issue should include:
+                        <ul>
+                            <li>The information in the box at the top of this page.</li>
+                            <li>A description of the problem.</li>
+                            <li>A screenshot of the problem.</li>
+                            <li>
+                                The CSV file you used when you encountered it if applicable and if you're comfortable
+                                sharing it.
+                            </li>
+                        </ul>
+                    </p>
+                    <h1>Special Thanks</h1>
+                    <p>
+                        A huge thanks to the <a target="_blank" href="https://fallenlondon.wiki">Fallen London Wiki</a>
+                        and its maintainers. None of this would be possible without their dilligent efforts.
+                    </p>
+                    <h1>Known Missing Stories</h1>
+                    <p>Beware, below be spoilers.</p>
+                    <ul>
+                        <li>The Ambitions</li>
+                        <li>Candlefinders</li>
+                        <li>Dreams</li>
+                        <ul><li>There are so many of them.</li></ul>
+                        <li>Advanced Skills</li>
+                        <li>Watchful/Shadowy/Dangerous/Persuasive Gains</li>
+                        <li>Agents</li>
+                        <li>Seeking</li>
+                        <li>Vanity Activities and Achievements</li>
+                        <li>Zee</li>
+                        <ul>
+                            <li>Evolution</li>
+                            <li>The Poisoned Pawn</li>
+                            <li>Becoming a Pirate</li>
+                            <li>Khaganian Intrigue</li>
+                        </ul>
+                        <li>Parabola</li>
+                        <ul>
+                            <li>Parabolan Wars</li>
+                            <li>Waswood Histories</li>
+                        </ul>
+                        <li>The Upper River</li>
+                        <ul>
+                            <li>The Great Hellbound Railway</li>
+                            <li>Becoming Acquainted with Rubbery Art</li>
+                            <li>Call of the Wanderer</li>
+                            <li>A Member of the Gondoliers</li>
+                            <li>A Day in the Life of a Novice Policeman</li>
+                            <li>Balmoral's Castellan</li>
+                            <ul>
+                                <li>Includes the initial installation and at least meeting the alternatives.</li>
+                            </ul>
+                            <li>The Church in the Wilds</li>
+                            <li>The Historian and the Antiquarian</li>
+                            <ul>
+                                <li>Covers discovery of the Wellspring.</li>
+                            </ul>
+                            <li>Breaking the Ice</li>
+                            <li>Discordant Studies</li>
+                            <ul>
+                                <li>Will only be documented to a point.</li>
+                            </ul>
+                            <li>Hearing the Mandolin</li>
+                            <li>Knights of the Marigold / Null and Void</li>
+                            <li>A Visitor to Hell</li>
+                            <li>The Scheme of a Phoenix</li>
+                            <li>The Tale of the Clay Highwayman</li>
+                            <li>The Grey Man</li>
+                            <li>Robbing the Calculating Lapidary</li>
+                            <li>The Lowest Floors of the Magistracy</li>
+                            <li>Let the Devil Have His Due</li>
+                        </ul>
+                        <li>The Roof</li>
+                        <ul>
+                            <li>Firmament</li>
+                            <li>The Kinetoculus</li>
+                            <li>Lung and Spleen</li>
+                            <li>Working for Old Resurrection</li>
+                            <li>Transplants from Above</li>
+                            <li>Miser Herding</li>
+                            <ul>
+                                <li>The unlocking process.</li>
+                            </ul>
+                        </ul>
+                    </ul>
                 </div>
             </div>
         </div>
