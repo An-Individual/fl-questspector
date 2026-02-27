@@ -104,7 +104,6 @@ a:hover {
     background-color: #bdb29e;
     color: #282520;
     box-sizing: border-box;
-    min-height: -webkit-fill-available;
 }
 
 .core-outline {
@@ -113,7 +112,6 @@ a:hover {
     border: 2px solid #897d67;
     padding: 0px;
     box-sizing: border-box;
-    min-height: -webkit-fill-available;
 }
 
 .page {
