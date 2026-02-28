@@ -1,0 +1,5 @@
+category,Ambition: Heart's Desire,amb_heart,400
+quest,Part All of Them,hd1,
+mappings,"story=271,truedenisen=140753",,
+ip,TODO: Break this up into parts.,story,
+c,TODO: Break this up into parts.,story && truedenisen,
