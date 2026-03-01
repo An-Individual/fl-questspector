@@ -1,5 +1,5 @@
 category,Ambition: Nemesis,amb_nemesis,400
-quest,Part All of Them,nem1,
+quest,Part: All of Them,nem1,
 mappings,"story=274,truedenisen=140753",,
-ip,TODO: Break this up into parts.,story,
-c,TODO: Break this up into parts.,story && truedenisen,
+ip,TODO: Break this up into parts and add details and guidance.,story,
+c,TODO: Break this up into parts and add details and guidance.,story && truedenisen,

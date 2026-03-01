@@ -1,8 +1,0 @@
-category,Zee Ztoriez,zee,300
-//,*************************************************************************,,
-quest,A Voyage of Scientific Discovery,science_voyage,
-mappings,"voyage=895,hislordship=578,universitytales=600,academics=577,watchful=209,posi=716,unwelcome=649",,
-ns,Academia on a boat! Could the University really keep you away?,!voyage && universitytales >= 30 && hislordship>=3 && academics >=3 && posi && watchful>=120,
-ip,Academia on a boat! Could the University really keep you away?,voyage,
-c,Academia on a boat! Could the University really keep you away?,voyage>=4 && !unwelcome,
-//,*************************************************************************,,

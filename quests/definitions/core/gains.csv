@@ -1,0 +1,25 @@
+augcat,core,
+//,*************************************************************************,
+quest,Watchful Gains,watch_gains
+mappings,"watchful=209,labprestige=127257",
+ns,TODO: Add details and guidance,watchful.level=200 && labprestige>=40
+ip,TODO: Add details and guidance,watchful.cap>200
+c,TODO: Add details and guidance,watchful.cap>=230
+//,*************************************************************************,
+quest,Persuasive Gains,pers_gains
+mappings,"persuasive=212,posi=716",
+ns,TODO: Add details and guidance,persuasive>=175 && posi>2
+ip,TODO: Add details and guidance,persuasive.cap>200
+c,TODO: Add details and guidance,persuasive.cap>=230
+//,*************************************************************************,
+quest,Shadowy Gains,shad_gains
+mappings,shadowy=210,
+ns,TODO: Add details and guidance,shadowy.level>=200
+ip,TODO: Add details and guidance,shadowy.cap>200
+c,TODO: Add details and guidance,shadowy.cap>=230
+//,*************************************************************************,
+quest,Dangerous Gains,dang_gains
+mappings,dangerous=211,
+ns,TODO: Add details and guidance,dangerous.level>=200
+ip,TODO: Add details and guidance,dangerous.cap>200
+c,TODO: Add details and guidance,dangerous.cap>=230
