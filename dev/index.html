@@ -21,7 +21,7 @@
     <body>
         <div class="title-header">
             <img class="title-img" src="images/title.svg" alt="Fallen London Questspector">
-            <span id="beta-text">BETA</span>
+            <span id="beta-text">ALPHA</span>
         </div>
         <div class="tabs">
             <div class="tab tab-selected" id="tab-upload">UPLOAD</div>
@@ -38,12 +38,19 @@
                         current progress in the game's storylines. Just upload you CSV file below to begin.
                     </p>
                     <p>
-                        <i>Note: The tool is incomplete. At the moment the bulk of the documented quests are found in London during the early and mid game.</i>
+                        <i>Note: The tool is incomplete. At the moment the bulk of the documented quests are found in London during the early and mid game and some are thin implementations that lack details.</i>
                     </p>
                     <label id="drop-zone">
                         Drop CSV file here, or click to upload.
                         <input type="file" id="file-input" accept="text/csv,.csv">
                     </label>
+                    <p>The tool hides storylines you do not have access to. It divides the rest into 4 states.</p>
+                    <ul>
+                        <li><b>Not Started:</b> Means you have access to a storyline but haven't taken the first steps.</li>
+                        <li><b>In Progress:</b> Means that you've started the quest and there are steps you could take to continue it.</li>
+                        <li><b>Blocked:</b> Means something is preventing you from continuing a storyline. This is usually a Living Story, a Skill that's too low, or the need to progress some other storyline.</li>
+                        <li><b>Complete:</b> You've done everything there is to do in this storyline.</li>
+                    </ul>
                     <p>
                         <i>Summary generation takes place client side within your browser. Your file won't leave your device.</i>
                     </p>
@@ -62,8 +69,8 @@
                     </div>
                     <p>
                         <i>
-                            Note: This tool is currently in beta. The quest list is incomplete and almost certainly riddled
-                            with bugs and typos.
+                            Note: This tool is currently in alpha. The quest list is incomplete and almost certainly riddled
+                            with bugs and typos. Some of the quests are thin implementations lacking details.
                         </i>
                     </p>
                     <h1>I'm seeing an error</h1>
@@ -76,7 +83,7 @@
                         Quest documentation is difficult since  
                         there isn't a way to easily take a character through that specific narrative
                         beat to confirm what the player will be seeing. Mistakes are inevitable and 
-                        spreadsheet programs aren't known for catching the mistakes of traitorous
+                        spreadsheet programs aren't known for catching the machinations of traitorous
                         fingers.
                     </p>
                     <h1>A storyline is missing</h1>
