@@ -5,9 +5,9 @@ import { HelpPageManager } from "./help-page-manager.js";
 import { TextFormatter } from "./helpers/text-formatter.js";
 
 export class QuestsPageManager {
-    static initialize() {
+    static async initialize() {
         QuestsPageManager.quests = new QuestsManager();
-        QuestsPageManager.initQuests();
+        await QuestsPageManager.initQuests();
     }
 
     static async initQuests() {

@@ -2,7 +2,8 @@ export class TabManager {
     static tabs = [
         "upload",
         "quests",
-        "help"
+        "help",
+        "landing"
     ]
 
     static classes = {
@@ -15,16 +16,24 @@ export class TabManager {
         TabManager.tabs.forEach(tab => {
                 const tabElem = document.getElementById(`tab-${tab}`);
                 const pageElem = document.getElementById(`page-${tab}`);
-                if(tab == name) {
-                    tabElem.classList.remove(TabManager.classes.clickable);
-                    tabElem.classList.remove(TabManager.classes.unselected);
-                    tabElem.classList.add(TabManager.classes.selected);
-                    pageElem.style.display = "block";
+                if (tab == name) {
+                    if (tabElem) {
+                        tabElem.classList.remove(TabManager.classes.clickable);
+                        tabElem.classList.remove(TabManager.classes.unselected);
+                        tabElem.classList.add(TabManager.classes.selected);
+                    }
+                    if (pageElem) {
+                        pageElem.style.display = "block";
+                    }
                 } else {
-                    tabElem.classList.remove(TabManager.classes.selected);
-                    tabElem.classList.add(TabManager.classes.clickable);
-                    tabElem.classList.add(TabManager.classes.unselected);
-                    pageElem.style.display = "none";
+                    if (tabElem) {
+                        tabElem.classList.remove(TabManager.classes.selected);
+                        tabElem.classList.add(TabManager.classes.clickable);
+                        tabElem.classList.add(TabManager.classes.unselected);
+                    }
+                    if (pageElem) {
+                        pageElem.style.display = "none";
+                    }
                 }
             });
     }
