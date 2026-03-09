@@ -39,8 +39,7 @@ a:hover {
     user-select: none;
 }
 
-.clickable:hover,
-.clickable:focus {
+.clickable:hover {
     text-decoration: none;
     cursor: pointer;
 }
@@ -92,8 +91,7 @@ a:hover {
     background-color: #787061;
 }
 
-.tab-unselected:hover,
-.tab-unselected:focus {
+.tab-unselected:hover {
     background-color: #857d6d;
 }
 
